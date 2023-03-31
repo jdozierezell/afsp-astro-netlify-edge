@@ -1,6 +1,6 @@
-import { graphQl } from "../utilities/graphQl"
+import { graphQl } from "./_graphQl"
 
-import { seo } from "../utilities/fragments/seo"
+import { seo } from "./fragments/seo"
 
 export const homeQuery = async () => {
   const home = await graphQl({
