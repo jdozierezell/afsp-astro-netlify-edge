@@ -1,19 +1,50 @@
 ---
 import Layout from '../layouts/Layout.astro'
 
-import { homeQuery } from '../queries/home'
+import { graphQl } from '../queries/_graphQl'
 
-const home = await homeQuery()
+const home = await graphQl({
+  query: `
+      {
+        home {
+          heroVideo {
+            alt
+            video {
+              mp4Url(res: medium)
+            }
+          }
+          heroHeading
+          heroBrief
+          heroButtonCta
+          heroButtonExternal
+          heroButtonExternalLink
+          heroButtonInternalLink {
+            ... on DetailRecord {
+              slug
+            }
+            ... on RealStoryRecord {
+              slug
+            }
+            ... on LandingRecord {
+              slug
+            }
+            ... on DetailTaggedRecord {
+              slug
+            }
+          }
+          instagramClass
+        }
+      }
+    `,
+})
 
-console.log(home)
-
-const foo = 'bar'
+console.log(home.home.instagramClass)
 ---
 
 <Layout title="Netlify Edge functions with Astro">
   <main>
     <h1>Netlify Foo Functions with Astro</h1>
 
-    {home.instagramClass}
+    {home.home.instagramClass}
   </main>
 </Layout>
