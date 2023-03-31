@@ -1,11 +1,6 @@
-
-
-
 export const graphQl = async (query : any) => {
-  const previewMode = import.meta.env.DEV === true
-  console.log(import.meta.env)
+  const previewMode = import.meta.env.PUBLIC_ENV === 'development' || import.meta.env.PUBLIC_ENV === 'cmspreview' ? 'true' : 'false'
   let headers 
-
   if(previewMode) {
   headers = {
         'Content-Type': 'application/json',
@@ -20,17 +15,10 @@ export const graphQl = async (query : any) => {
         'Authorization': `Bearer ${import.meta.env.DATOCMS_API}`
       }
   }
- 
-  console.log(previewMode)
   
   const response = await fetch('https://graphql.datocms.com/', {
   method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-    Accept: 'application/json',
-    Authorization: `Bearer 9f5cbe4841edf2fce54a61df719ade`,
-    'X-Include-Drafts': 'true',
-  },
+  headers: headers,
   body: JSON.stringify(query),
 })
 
