@@ -1,15 +1,10 @@
 import { graphQl } from "./_graphQl"
 
-import { seo } from "./fragments/seo"
-
 export const homeQuery = async () => {
   const home = await graphQl({
     query: `
       {
         home {
-          _seoMetaTags {
-            ...seo
-          }
           heroVideo {
             alt
             video {
@@ -38,7 +33,6 @@ export const homeQuery = async () => {
           instagramClass
         }
       }
-      ${seo}
     `,
   })
 
