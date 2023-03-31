@@ -1,11 +1,17 @@
 ---
-import Layout from '../layouts/Layout.astro'
+import Layout from '../layouts/Layout.astro';
+
+import { homeQuery } from '../queries/home';
+
+const home = await homeQuery();
+
+console.log(home);
 ---
 
 <Layout title="Netlify Edge functions with Astro">
   <main>
-    <h1>Netlify Edge Functions with Astro</h1>
+    <h1>Netlify Foo Functions with Astro</h1>
 
-    Welcome, visitor from COUNTRYNAME!
+    {home.heroHeading}
   </main>
 </Layout>
