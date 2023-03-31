@@ -1,0 +1,67 @@
+/* Define Fonts */
+
+@font-face {
+  font-family: 'AvenirNextLTPro-Regular';
+  src: url('../fonts/AvenirNextLTPro-Regular.woff2') format('woff2'),
+    url('../fonts/AvenirNextLTPro-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AvenirNextLTPro-BoldIt';
+  src: url('../fonts/AvenirNextLTPro-BoldIt.woff2') format('woff2'),
+    url('../fonts/AvenirNextLTPro-BoldIt.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AvenirNextLTPro-Demi';
+  src: url('../fonts/AvenirNextLTPro-Demi.woff2') format('woff2'),
+    url('../fonts/AvenirNextLTPro-Demi.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'AvenirNextLTPro-It';
+  src: url('../fonts/AvenirNextLTPro-It.woff2') format('woff2'),
+    url('../fonts/AvenirNextLTPro-It.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AvenirNextLTPro-DemiIt';
+  src: url('../fonts/AvenirNextLTPro-DemiIt.woff2') format('woff2'),
+    url('../fonts/AvenirNextLTPro-DemiIt.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AvenirNextLTPro-Bold';
+  src: url('../fonts/AvenirNextLTPro-Bold.woff2') format('woff2'),
+    url('../fonts/AvenirNextLTPro-Bold.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PaulGroteskSoft-Regular';
+  src: url('../fonts/PaulGroteskSoft-Regular.woff2') format('woff2'),
+    url('../fonts/PaulGroteskSoft-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PaulGroteskSoft-Medium';
+  src: url('../fonts/PaulGroteskSoft-Medium.woff2') format('woff2'),
+    url('../fonts/PaulGroteskSoft-Medium.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PaulGroteskSoft-Bold';
+  src: url('../fonts/PaulGroteskSoft-Bold.woff2') format('woff2'),
+    url('../fonts/PaulGroteskSoft-Bold.woff') format('woff');
+  font-display: swap;
+}
+
+html {
+  font-family: 'AvenirNextLTPro-Regular';
+}
