@@ -6,10 +6,14 @@ import { homeQuery } from '../queries/home'
 const home = await homeQuery()
 
 console.log(home)
+
+const foo = 'bar'
 ---
 
 <Layout title="Netlify Edge functions with Astro">
   <main>
     <h1>Netlify Foo Functions with Astro</h1>
+
+    {foo}
   </main>
 </Layout>
