@@ -39,12 +39,14 @@ const home = await graphQl({
 })
 
 console.log(home.home.instagramClass)
+
+const environment = import.meta.env.PUBLIC_ENV
 ---
 
 <Layout title="Netlify Edge functions with Astro">
   <main>
     <h1>Netlify Foo Functions with Astro</h1>
 
-    {home.home.instagramClass}
+    {environment}
   </main>
 </Layout>
